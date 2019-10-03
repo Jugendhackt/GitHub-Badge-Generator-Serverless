@@ -116,6 +116,11 @@ module.exports.handler = async event => {
         if(event.queryStringParameters["type"]) {
             badgeType = event.queryStringParameters["type"]
         }
+        if(event.queryStringParameters["noyear"] || event.queryStringParameters["hideyear"]) {
+            if((event.queryStringParameters["noyear"] == "true") || (event.queryStringParameters["hideyear"] == "true")) {
+                evtYear = ""
+            }
+        }
     }
 
     function getBody() {
