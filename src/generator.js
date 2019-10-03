@@ -162,7 +162,7 @@ module.exports.handler = async event => {
                         <a href="https://jugendhackt.org">
                             <path d="M23.28,0H173.85V20H26.28Z" style="fill: #555"/>
                             <path d="M0,0H26.28V20H0Z" style="fill: ${evtColor}"/>
-                            <text transform="translate(34.81 14.51)" style="isolation: isolate;font-size: 11px;fill: #fff;font-family: Verdana">Started at JugendHackt</text>
+                            <text transform="translate(34.81 14.51)" style="isolation: isolate;font-size: 11px;fill: #fff;font-family: Verdana">Started at Jugend hackt</text>
                             <g>
                                 <rect x="9.31" y="10.53" width="1.09" height="1.09" style="fill: #fff"/>
                                 <rect x="15.87" y="10.53" width="1.09" height="1.09" style="fill: #fff"/>
@@ -179,7 +179,7 @@ module.exports.handler = async event => {
                         <a href="https://jugendhackt.org">
                             <rect x="0" y="0" width="170" height="20" style="fill:#555"/>
                             <rect x="169" y="0" width="58" height="20" style="fill:${evtColor}"/>
-                            <text transform="translate(8.53 14.52)" style="isolation: isolate;font-size: 11px;fill: #fff;font-family: Verdana">Created for JugendHackt in</text>
+                            <text transform="translate(8.53 14.52)" style="isolation: isolate;font-size: 11px;fill: #fff;font-family: Verdana">Created for Jugend hackt in</text>
                             <g>
                                 <text transform="translate(192.62 14.27)" style="isolation: isolate;font-size: 11px;fill: #fff;font-family: Verdana">${evtYear}</text>
                                 <g>
@@ -200,7 +200,7 @@ module.exports.handler = async event => {
                         <a href="https://jugendhackt.org">
                             <rect x="0" y="0" width="136" height="20" style="fill:#555"/>
                             <rect x="135" y="0" width="7000" height="20" style="fill:${evtColor}"/>
-                            <text transform="translate(8 14)" style="isolation:isolate;font-size:11px;fill:#fff;" font-family="Verdana,Geneva,sans-serif">Made at JugendHackt</text>
+                            <text transform="translate(8 14)" style="isolation:isolate;font-size:11px;fill:#fff;" font-family="Verdana,Geneva,sans-serif">Made at Jugend hackt</text>
                             <text transform="translate(160 14)" style="isolation:isolate;font-size:11px;fill:#fff;" font-family="Verdana,Geneva,sans-serif">${evtLong} ${evtYear}</text>
                             <rect x="144.9" y="10.55" width="1.09" height="1.09" style="fill:#fff"/>
                             <rect x="151.46" y="10.55" width="1.09" height="1.09" style="fill:#fff"/>
