@@ -1,12 +1,123 @@
 module.exports.handler = async event => {
 
-    let viewWidth, evtAbbr, evtLong, evtColor
-    let evtYear = new Date("Y")
+    let viewWidth = 231
+    let evtAbbr = "BER"
+    let evtLong = "Berlin"
+    let evtColor = "#2aabe1"
+    let evtYear = new Date().getFullYear()
     let badgeType = "made-at"
 
     if(event.queryStringParameters) { // check if any get parameters are set
+        if(event.queryStringParameters["year"]) {
+            if(!isNaN(event.queryStringParameters["year"])) {
+                evtYear = event.queryStringParameters["year"]
+            } else {
+                evtYear = "err"
+            }
+        }
+        
+        if(event.queryStringParameters["evt"]) {
+            evtAbbr = event.queryStringParameters["evt"]
+        }
+        if(event.queryStringParameters["event"]) {
+            evtAbbr = event.queryStringParameters["event"]
+        }
 
+        switch(evtAbbr.toLowerCase()) {
+            case "ber":
+            case "berlin":
+                viewWidth = 231
+                evtAbbr = "BER"
+                evtLong = "Berlin"
+                evtColor = "#2aabe1"
+                break
+            case "ffm":
+            case "frankfurt":
+                viewWidth = 250
+                evtAbbr = "FFM"
+                evtLong = "Frankfurt"
+                evtColor = "#5d6eb2"
+                break
+            case "hal":
+            case "halle":
+                viewWidth = 226
+                evtAbbr = "HAL"
+                evtLong = "Halle"
+                evtColor = "#FFE712"
+                break
+            case "hh":
+            case "hamburg":
+                viewWidth = 250
+                evtAbbr = "HH"
+                evtLong = "Hamburg"
+                evtColor = "#22B573"
+                break
+            case "hd":
+            case "heidelberg":
+                viewWidth = 259
+                evtAbbr = "HD"
+                evtLong = "Heidelberg"
+                evtColor = "#e74712"
+                break
+            case "cgn":
+            case "koeln":
+            case "köln":
+            case "cologne":
+                viewWidth = 224
+                evtAbbr = "CGN"
+                evtLong = "Köln"
+                evtColor = "#2E3192"
+                break
+            case "at":
+            case "österreich":
+            case "oesterreich":
+            case "austria":
+                viewWidth = 256
+                evtAbbr = "AT"
+                evtLong = "Österreich"
+                evtColor = "#00cc33"
+                break
+            case "ch":
+            case "schweiz":
+            case "switzerland":
+                viewWidth = 243
+                evtAbbr = "CH"
+                evtLong = "Schweiz"
+                evtColor = "#CC0033"
+                break
+            case "mv":
+            case "mecklenburg-vorpommern":
+            case "mecklenburgvorpommern":
+                viewWidth = 345
+                evtAbbr = "MV"
+                evtLong = "Mecklenburg-Vorpommern"
+                evtColor = "#B5DDDF"
+                break
+            case "ulm":
+                viewWidth = 220
+                evtAbbr = "ULM"
+                evtLong = "Ulm"
+                evtColor = "#EA680E"
+                break
+            case "asia":
+            case "asien":
+                viewWidth = 222
+                evtAbbr = "ASIA"
+                evtLong = "Asia"
+                evtColor = "#FFD000"
+                break
+            default:
+                viewWidth = 231
+                evtAbbr = "BER"
+                evtLong = "Berlin"
+                evtColor = "#2aabe1"
+                break
+        }
+        if(event.queryStringParameters["type"]) {
+            badgeType = event.queryStringParameters["type"]
+        }
     }
+
     function getBody() {
         switch(badgeType) {
             case "view-presentation":
