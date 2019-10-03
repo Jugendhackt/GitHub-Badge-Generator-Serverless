@@ -119,6 +119,7 @@ module.exports.handler = async event => {
         if(event.queryStringParameters["noyear"] || event.queryStringParameters["hideyear"]) {
             if((event.queryStringParameters["noyear"] == "true") || (event.queryStringParameters["hideyear"] == "true")) {
                 evtYear = ""
+                viewWidth = viewWidth-8
             }
         }
     }
