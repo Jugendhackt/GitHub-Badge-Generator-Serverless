@@ -195,7 +195,7 @@ module.exports.handler = async event => {
             case "made-at":
             default:
                 return `
-                    <svg xmlns="http://www.w3.org/2000/svg" width="'.$viewWidth.'" height="20" viewBox="0 0 ${viewWidth} 20">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="${viewWidth}" height="20" viewBox="0 0 ${viewWidth} 20">
                         <title>JH${evtAbbr} Badge</title>
                         <a href="https://jugendhackt.org">
                             <rect x="0" y="0" width="136" height="20" style="fill:#555"/>
