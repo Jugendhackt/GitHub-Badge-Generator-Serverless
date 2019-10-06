@@ -2,8 +2,10 @@
 A simple PHP generator for svg GitHub Readme Badges for JugendHackt.
 
 ## Tutorial
-The generator is available at https://jhbadge.de/.
+The generator is available at https://jhbadge.com/.
 By default it creates this Badge: ![Jugend hackt Badge](https://jhbadge.de/)
+
+The builder can be found [here](https://builder.jhbadge.com).
 
 To select the specific event, add the evt GET-Variable to your URL.
 Example: This URL (https://jhbadge.de/?evt=ffm) generates this Badge: ![Jugend hackt Frankfurt Badge](https://jhbadge.de/?evt=ffm)
