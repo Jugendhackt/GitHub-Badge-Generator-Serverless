@@ -72,6 +72,7 @@ module.exports.handler = async event => {
             case "österreich":
             case "oesterreich":
             case "austria":
+            case "linz":
                 viewWidth = 256
                 evtAbbr = "AT"
                 evtLong = "Österreich"
@@ -80,6 +81,7 @@ module.exports.handler = async event => {
             case "ch":
             case "schweiz":
             case "switzerland":
+            case "schaffhausen":
                 viewWidth = 243
                 evtAbbr = "CH"
                 evtLong = "Schweiz"
